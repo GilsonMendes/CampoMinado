@@ -16,3 +16,5 @@ const params= {
         return Math.floor(boardHeight / this.blockSize)
     }
 }
+
+export default params

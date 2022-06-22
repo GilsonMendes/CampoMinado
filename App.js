@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,16 +18,30 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import params from './src/params';
 
+//Importes das class
 
-export default App => {
+import Params from './src/params';
 
-  return(
-    <Text style= {styles.sectionContainer}>Olá! Estamos aqui!</Text>
-  )
+export default class App extends Component {
+  
+  render(){
+    return(
+      <View style = {styles.sectionContainer}>
+        <Text style = {styles.sectionTitle}>
+          Iniciando o Mines!
+        </Text>
+        <Text style = {styles.sectionDescription}>
+          Tamanho da garde: 
+          {params.getRowAmounts()}x{params.getColumnsAmount()}
+
+        </Text>
+      </View>
+    )
+  }
 
 }
-
 
 const styles = StyleSheet.create({
   sectionContainer: {
