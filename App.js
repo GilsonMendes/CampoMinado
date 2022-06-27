@@ -23,6 +23,7 @@ import params from './src/params';
 //Importes das class
 
 import Params from './src/params';
+import Field from './src/components/Field';
 
 export default class App extends Component {
   
@@ -33,10 +34,11 @@ export default class App extends Component {
           Iniciando o Mines!
         </Text>
         <Text style = {styles.sectionDescription}>
-          Tamanho da garde: 
+          
           {params.getRowAmounts()}x{params.getColumnsAmount()}
 
         </Text>
+        <Field/>
       </View>
     )
   }
